@@ -1,0 +1,2 @@
+This file is a placefolder for now since each folder in github has to contain at least one file.
+More files will be in this fodler in later checkpoints of our project.
