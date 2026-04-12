@@ -1,0 +1,462 @@
+curl -fsSL https://openclaw.ai/install.sh | bash
+
+  🦞 OpenClaw Installer
+  Chat automation for people who peaked at IRC.
+
+✓ Detected: linux
+
+Install plan
+OS: linux
+Install method: npm
+Requested version: latest
+
+[1/3] Preparing environment
+✓ Node.js v22.22.2 found
+· Active Node.js: v22.22.2 (/usr/bin/node)
+· Active npm: 10.9.7 (/usr/bin/npm)
+
+[2/3] Installing OpenClaw
+✓ Git already installed
+· Installing OpenClaw v2026.4.5
+✓ OpenClaw npm package installed
+✓ OpenClaw installed
+
+[3/3] Finalizing setup
+
+🦞 OpenClaw installed successfully (OpenClaw 2026.4.5 (3e72c03))!
+Finally unpacked. Now point me at your problems.
+
+· Starting setup
+
+
+🦞 OpenClaw 2026.4.5 (3e72c03)
+   I don't judge, but your missing API keys are absolutely judging you.
+
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+██░▄▄▄░██░▄▄░██░▄▄▄██░▀██░██░▄▄▀██░████░▄▄▀██░███░██
+██░███░██░▀▀░██░▄▄▄██░█░█░██░█████░████░▀▀░██░█░█░██
+██░▀▀▀░██░█████░▀▀▀██░██▄░██░▀▀▄██░▀▀░█░██░██▄▀▄▀▄██
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+                  🦞 OPENCLAW 🦞                    
+ 
+┌  OpenClaw setup
+│
+◇  Security ──────────────────────────────────────────────────────────────╮
+│                                                                         │
+│  Security warning — please read.                                        │
+│                                                                         │
+│  OpenClaw is a hobby project and still in beta. Expect sharp edges.     │
+│  By default, OpenClaw is a personal agent: one trusted operator         │
+│  boundary.                                                              │
+│  This bot can read files and run actions if tools are enabled.          │
+│  A bad prompt can trick it into doing unsafe things.                    │
+│                                                                         │
+│  OpenClaw is not a hostile multi-tenant boundary by default.            │
+│  If multiple users can message one tool-enabled agent, they share that  │
+│  delegated tool authority.                                              │
+│                                                                         │
+│  If you’re not comfortable with security hardening and access control,  │
+│  don’t run OpenClaw.                                                    │
+│  Ask someone experienced to help before enabling tools or exposing it   │
+│  to the internet.                                                       │
+│                                                                         │
+│  Recommended baseline:                                                  │
+│  - Pairing/allowlists + mention gating.                                 │
+│  - Multi-user/shared inbox: split trust boundaries (separate            │
+│    gateway/credentials, ideally separate OS users/hosts).               │
+│  - Sandbox + least-privilege tools.                                     │
+│  - Shared inboxes: isolate DM sessions (`session.dmScope:               │
+│    per-channel-peer`) and keep tool access minimal.                     │
+│  - Keep secrets out of the agent’s reachable filesystem.                │
+│  - Use the strongest available model for any bot with tools or          │
+│    untrusted inboxes.                                                   │
+│                                                                         │
+│  Run regularly:                                                         │
+│  openclaw security audit --deep                                         │
+│  openclaw security audit --fix                                          │
+│                                                                         │
+│  Must read: https://docs.openclaw.ai/gateway/security                   │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────╯
+│
+◇  I understand this is personal-by-default and shared/multi-user use 
+│  requires lock-down. Continue?
+│  Yes
+│
+◇  Setup mode
+│  Manual
+│
+◇  What do you want to set up?
+│  Local gateway (this machine)
+│
+◇  Workspace directory
+│  /home/jun/.openclaw/workspace
+│
+◇  Model/auth provider
+│  Google
+│
+◇  Enter Gemini API key
+│  "Our Key"
+│
+◇  Model configured ───────────────────────────────────╮
+│                                                      │
+│  Default model set to google/gemini-3.1-pro-preview  │
+│                                                      │
+├──────────────────────────────────────────────────────╯
+│
+◇  Default model
+│  google/gemini-2.5-flash
+│
+◇  Gateway port
+│  18789
+│
+◇  Gateway bind
+│  Loopback (127...)
+│
+◇  Gateway auth
+│  Token
+│
+◇  Tailscale exposure
+│  Off
+│
+◇  How do you want to provide the gateway token?
+│  Generate/store plaintext token
+│
+◇  Gateway token (blank to generate)
+│
+│
+◇  Channel status ──────────────────────────────────────╮
+│                                                       │
+│  LINE: needs token + secret                           │
+│  Accounts: 0                                          │
+│  Discord: needs token                                 │
+│  iMessage: needs setup                                │
+│  imsg: missing (imsg)                                 │
+│  Signal: needs setup                                  │
+│  signal-cli: missing (signal-cli)                     │
+│  Slack: needs tokens                                  │
+│  Telegram: needs token                                │
+│  WhatsApp: not linked                                 │
+│  QQ Bot: needs AppID + AppSecret                      │
+│  Google Chat: needs service account                   │
+│  MS Teams: needs app credentials                      │
+│  Mattermost: needs token + url                        │
+│  Nextcloud Talk: needs setup                          │
+│  Feishu: needs app credentials                        │
+│  Matrix: needs homeserver + access token or password  │
+│  BlueBubbles: needs setup                             │
+│  IRC: needs host + nick                               │
+│  Zalo: needs token                                    │
+│  Zalo Personal: needs QR login                        │
+│  Synology Chat: needs token + incoming webhook        │
+│  Accounts: 0                                          │
+│  Tlon: needs setup                                    │
+│  Nostr: needs private key                             │
+│  Relays: 2                                            │
+│  Twitch: not configured                               │
+│  Twitch: installed                                    │
+│                                                       │
+├───────────────────────────────────────────────────────╯
+│
+◇  Configure chat channels now?
+│  Yes
+│
+◇  How channels work ──────────────────────────────────────────────────────╮
+│                                                                          │
+│  DM security: default is pairing; unknown DMs get a pairing code.        │
+│  Approve with: openclaw pairing approve <channel> <code>                 │
+│  Public DMs require dmPolicy="open" + allowFrom=["*"].                   │
+│  Multi-user DMs: run: openclaw config set session.dmScope                │
+│  "per-channel-peer" (or "per-account-channel-peer" for multi-account     │
+│  channels) to isolate sessions.                                          │
+│  Docs:                                                                   │
+│  channels/pairing   │
+│                                                                          │
+│  Feishu: 飞书/Lark enterprise messaging with doc/wiki/drive tools.       │
+│  Google Chat: Google Workspace Chat app with HTTP webhook.               │
+│  Nostr: Decentralized protocol; encrypted DMs via NIP-04.                │
+│  Microsoft Teams: Teams SDK; enterprise support.                         │
+│  Mattermost: self-hosted Slack-style chat; install the plugin to         │
+│  enable.                                                                 │
+│  Nextcloud Talk: Self-hosted chat via Nextcloud Talk webhook bots.       │
+│  Matrix: open protocol; install the plugin to enable.                    │
+│  BlueBubbles: iMessage via the BlueBubbles mac app + REST API.           │
+│  LINE: LINE Messaging API webhook bot.                                   │
+│  Zalo: Vietnam-focused messaging platform with Bot API.                  │
+│  Zalo Personal: Zalo personal account via QR code login.                 │
+│  Synology Chat: Connect your Synology NAS Chat to OpenClaw with full     │
+│  agent capabilities.                                                     │
+│  Tlon: decentralized messaging on Urbit; install the plugin to enable.   │
+│  Discord: very well supported right now.                                 │
+│  iMessage: this is still a work in progress.                             │
+│  IRC: classic IRC networks with DM/channel routing and pairing           │
+│  controls.                                                               │
+│  QQ Bot: connect to QQ via official QQ Bot API with group chat and       │
+│  direct message support.                                                 │
+│  Signal: signal-cli linked device; more setup (David Reagans: "Hop on    │
+│  Discord.").                                                             │
+│  Slack: supported (Socket Mode).                                         │
+│  Telegram: simplest way to get started — register a bot with @BotFather  │
+│  and get going.                                                          │
+│  Twitch: Twitch chat integration                                         │
+│  WhatsApp: works with your own number; recommend a separate phone +      │
+│  eSIM.                                                                   │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Select a channel
+│  Discord (Bot API)
+│
+◇  Discord bot token ────────────────────────────────────────────────────╮
+│                                                                        │
+│  1) Discord Developer Portal -> Applications -> New Application        │
+│  2) Bot -> Add Bot -> Reset Token -> copy token                        │
+│  3) OAuth2 -> URL Generator -> scope 'bot' -> invite to your server    │
+│  Tip: enable Message Content Intent if you need message text. (Bot ->  │
+│  Privileged Gateway Intents -> Message Content Intent)                 │
+│  Docs: discord             │
+│                                                                        │
+├────────────────────────────────────────────────────────────────────────╯
+│
+◇  How do you want to provide this Discord bot token?
+│  Enter Discord bot token
+│
+◇  Enter Discord bot token
+│  [insert bot token]
+│
+◇  Configure Discord channels access?
+│  Yes
+│
+◇  Discord channels access
+│  Allowlist (recommended)
+│
+◇  Discord channels allowlist (comma-separated)
+│  CS-361 Group/#open-chat
+│
+◇  Select a channel
+│  Discord (Bot API)
+│
+◇  Discord already configured. What do you want to do?
+│  Skip (leave as-is)
+│
+◇  Select a channel
+│  Finished
+│
+◇  Selected channels ────────────────────────────────────────────╮
+│                                                                │
+│  Discord — very well supported right now. Docs:                │
+│  discord  │
+│                                                                │
+├────────────────────────────────────────────────────────────────╯
+│
+◇  Configure DM access policies now? (default: pairing)
+│  No
+Updated ~/.openclaw/openclaw.json
+Workspace OK: ~/.openclaw/workspace
+Sessions OK: ~/.openclaw/agents/main/sessions
+│
+◇  Web search ───────────────────────────────────────────────────────╮
+│                                                                    │
+│  Web search lets your agent look things up online.                 │
+│  Choose a provider. Some providers need an API key, and some work  │
+│  key-free.                                                         │
+│  Docs: https://docs.openclaw.ai/tools/web                          │
+│                                                                    │
+├────────────────────────────────────────────────────────────────────╯
+│
+◇  Search provider
+│  Gemini (Google Search)
+│
+◇  Google Gemini API key
+│  "Our Key"
+│
+◇  Skills status ─────────────╮
+│                             │
+│  Eligible: 6                │
+│  Missing requirements: 37   │
+│  Unsupported on this OS: 7  │
+│  Blocked by allowlist: 0    │
+│                             │
+├─────────────────────────────╯
+│
+◇  Configure skills now? (recommended)
+│  Yes
+│
+◆  Install missing skill dependencies
+│  ◻ Skip for now (Continue without installing dependencies)
+│  ◻ 🔐 1password
+│  ◻ 📰 blogwatcher
+│  ◻ 🫐 blucli
+│  ◻ 📸 camsnap
+│  ◻ 🧩 clawhub
+│  ◻ 🛌 eightctl
+│
+◆  Install missing skill dependencies
+│  ◻ Skip for now (Continue without installing dependencies)
+│  ◻ 🔐 1password
+│  ◻ 📰 blogwatcher
+│  ◻ 🫐 blucli
+│  ◻ 📸 camsnap
+│  ◻ 🧩 clawhub
+│  ◻ 🛌 eightctl
+│
+◆  Install missing skill dependencies
+│  ◻ Skip for now (Continue without installing dependencies)
+│  ◻ 🔐 1password
+│  ◻ 📰 blogwatcher
+│  ◻ 🫐 blucli
+│  ◻ 📸 camsnap
+│  ◻ 🧩 clawhub
+│  ◻ 🛌 eightctl
+│
+◆  Install missing skill dependencies
+│  ◻ Skip for now (Continue without installing dependencies)
+│  ◻ 🔐 1password
+│  ◻ 📰 blogwatcher
+│  ◻ 🫐 blucli
+│  ◻ 📸 camsnap
+│
+◆  Install missing skill dependencies
+│  ◻ Skip for now (Continue without installing dependencies)
+│  ◻ 🔐 1password
+│  ◻ 📰 blogwatcher
+│  ◻ 🫐 blucli
+│  ◻ 📸 camsnap
+│
+◇  Install missing skill dependencies
+│  Skip for now
+│
+◇  Set GOOGLE_PLACES_API_KEY for goplaces?
+│  No
+│
+◇  Set NOTION_API_KEY for notion?
+│  No
+│
+◇  Set OPENAI_API_KEY for openai-whisper-api?
+│  No
+│
+◇  Set ELEVENLABS_API_KEY for sag?
+│  No
+│
+◇  Configure plugins (select to set up now, or skip)
+│  @openclaw/google-plugin
+│
+◇  Plugin setup ──────────────────────╮
+│                                     │
+│  Configure @openclaw/google-plugin  │
+│                                     │
+├─────────────────────────────────────╯
+│
+◇  Gemini Search Model — Gemini model override for web search grounding.
+│
+│
+◇  Hooks ──────────────────────────────────────────────────────────╮
+│                                                                  │
+│  Hooks let you automate actions when agent commands are issued.  │
+│  Example: Save session context to memory when you issue /new or  │
+│  /reset.                                                         │
+│                                                                  │
+│  Learn more: https://docs.openclaw.ai/automation/hooks           │
+│                                                                  │
+├──────────────────────────────────────────────────────────────────╯
+│
+◇  Enable hooks?
+│  Skip for now
+Config overwrite: /home/jun/.openclaw/openclaw.json (sha256 5c7ad0426c4f30cde4492c6e9f7a2bb67be0d19d7e8eb1bf40769c8ef833758c -> 14930fcd8044b783b4d2863587a8378a5296f53816035f5a226a48ae60c3836b, backup=/home/jun/.openclaw/openclaw.json.bak)
+│
+◇  Systemd ────────────────────────────────────────────────────────────╮
+│                                                                      │
+│  Linux installs use a systemd user service by default. Without       │
+│  lingering, systemd stops the user session on logout/idle and kills  │
+│  the Gateway.                                                        │
+│  Enabling lingering now (may require sudo; writes                    │
+│  /var/lib/systemd/linger).                                           │
+│                                                                      │
+├──────────────────────────────────────────────────────────────────────╯
+│
+◇  Systemd ────────────────────────────╮
+│                                      │
+│  Enabled systemd lingering for jun.  │
+│                                      │
+├──────────────────────────────────────╯
+│
+◇  Install Gateway service (recommended)
+│  Yes
+│
+◇  Gateway service runtime
+│  Node (recommended)
+│
+◑  Installing Gateway service…
+Installed systemd service: /home/jun/.config/systemd/user/openclaw-gateway.service
+◇  Gateway service installed.
+Health check failed: timeout
+│
+◇  Health check help ────────────────────────────────╮
+│                                                    │
+│  Docs:                                             │
+│  https://docs.openclaw.ai/gateway/health           │
+│  https://docs.openclaw.ai/gateway/troubleshooting  │
+│                                                    │
+├────────────────────────────────────────────────────╯
+│
+◇  Optional apps ────────────────────────╮
+│                                        │
+│  Add nodes for extra features:         │
+│  - macOS app (system + notifications)  │
+│  - iOS app (camera/canvas)             │
+│  - Android app (camera/canvas)         │
+│                                        │
+├────────────────────────────────────────╯
+│
+◇  Control UI ───────────────────────────────────────────────────────────────╮
+│                                                                            │
+│  Web UI: http://127...                                          │
+│  Web UI (with token):                                                      │
+│  http://127...  │
+│                                                                      │
+│  Gateway WS: ws://127...                                          │
+│  Gateway: not detected (timeout)                                           │
+│  Docs: https://docs.openclaw.ai/web/control-ui                             │
+│                                                                            │
+├────────────────────────────────────────────────────────────────────────────╯
+│
+◇  Workspace backup ────────────────────────────────────────╮
+│                                                           │
+│  Back up your agent workspace.                            │
+│  Docs: https://docs.openclaw.ai/concepts/agent-workspace  │
+│                                                           │
+├───────────────────────────────────────────────────────────╯
+│
+◇  Security ──────────────────────────────────────────────────────╮
+│                                                                 │
+│  Running agents on your computer is risky — harden your setup:  │
+│  https://docs.openclaw.ai/security                              │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────╯
+│
+◇  Enable bash shell completion for openclaw?
+│  Yes
+│
+◇  Shell completion ────────────────────────────────────────────────────────╮
+│                                                                           │
+│  Shell completion installed. Restart your shell or run: source ~/.bashrc  │
+│                                                                           │
+├───────────────────────────────────────────────────────────────────────────╯
+│
+◇  Web search ──────────────────────────────────────────────────────────────────╮
+│                                                                               │
+│  Web search is enabled, so your agent can look things up online when needed.  │
+│                                                                               │
+│  Provider: Gemini (Google Search)                                             │
+│  API key: stored in config.                                                   │
+│  Docs: https://docs.openclaw.ai/tools/web                                     │
+│                                                                               │
+├───────────────────────────────────────────────────────────────────────────────╯
+│
+◇  What now ─────────────────────────────────────────────────────────────╮
+│                                                                        │
+│  What now: https://openclaw.ai/showcase ("What People Are Building").  │
+│                                                                        │
+├────────────────────────────────────────────────────────────────────────╯
+│
+└  Onboarding complete. Use the dashboard link above to control OpenClaw.
