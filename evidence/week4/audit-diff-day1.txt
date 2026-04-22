@@ -1,0 +1,27 @@
+2c2
+< Summary: 1 critical · 3 warn · 1 info
+---
+> Summary: 0 critical · 3 warn · 2 info
+5,12d4
+< CRITICAL
+< models.small_params Small models require sandboxing and web tools disabled
+<   Small models (<=300B params) detected:
+< - lmstudio/qwen2.5-7b-instruct-1m (7B) @ agents.defaults.model.primary (unsafe; sandbox=off; web=[web_search, web_fetch])
+< Uncontrolled input tools allowed: web_search, web_fetch.
+< Small models are not recommended for untrusted inputs.
+<   Fix: If you must use small models, enable sandboxing for all sessions (agents.defaults.sandbox.mode="all") and disable web_search/web_fetch/browser (tools.deny=["group:web","browser"]).
+< 
+24,26c16,17
+< Runtime/process tools are exposed without full sandboxing in at least one context.
+< Potential high-impact tool exposure contexts:
+< - agents.defaults (sandbox=off; runtime=[exec, process]; fs=[read, write, edit, apply_patch]; fs.workspaceOnly=false)
+---
+> No unguarded runtime/process tools were detected by this heuristic.
+> No unguarded runtime/filesystem contexts detected.
+37a29,34
+> models.small_params Small models require sandboxing and web tools disabled
+>   Small models (<=300B params) detected:
+> - lmstudio/qwen2.5-7b-instruct-1m (7B) @ agents.defaults.model.primary (ok; sandbox=all; web=[off])
+> No web/browser tools detected for these models.
+> Small models are not recommended for untrusted inputs.
+>   Fix: If you must use small models, enable sandboxing for all sessions (agents.defaults.sandbox.mode="all") and disable web_search/web_fetch/browser (tools.deny=["group:web","browser"]).

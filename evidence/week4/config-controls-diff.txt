@@ -1,0 +1,28 @@
+2c2,4
+<   "sandbox": null,
+---
+>   "sandbox": {
+>     "mode": "all"
+>   },
+9a12,18
+>     },
+>     "deny": [
+>       "group:web",
+>       "browser"
+>     ],
+>     "fs": {
+>       "workspaceOnly": true
+12,13c21,30
+<   "skills": null,
+<   "hooks": null
+---
+>   "skills": {
+>     "allowBundled": [
+>       "discord"
+>     ]
+>   },
+>   "hooks": {
+>     "command-logger": {
+>       "enabled": true
+>     }
+>   }
