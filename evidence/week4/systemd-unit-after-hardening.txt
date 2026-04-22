@@ -1,0 +1,39 @@
+# /home/jun/.config/systemd/user/openclaw-gateway.service
+[Unit]
+Description=OpenClaw Gateway (v2026.4.5)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/bin/node /home/jun/.npm-global/lib/node_modules/openclaw/dist/index.js gateway --port 18789
+Restart=always
+RestartSec=5
+TimeoutStopSec=30
+TimeoutStartSec=30
+SuccessExitStatus=0 143
+KillMode=control-group
+Environment=HOME=/home/jun
+Environment=TMPDIR=/tmp
+Environment=PATH=/usr/bin:/home/jun/.local/bin:/home/jun/.npm-global/bin:/home/jun/bin:/home/jun/.volta/bin:/home/jun/.asdf/shims:/home/jun/.bun/bin:/home/jun/.nvm/current/bin:/home/jun/.fnm/current/bin:/home/jun/.local/share/pnpm:/usr/local/bin:/bin
+Environment=OPENCLAW_GATEWAY_PORT=18789
+Environment=OPENCLAW_SYSTEMD_UNIT=openclaw-gateway.service
+Environment="OPENCLAW_WINDOWS_TASK_NAME=OpenClaw Gateway"
+Environment=OPENCLAW_SERVICE_MARKER=openclaw
+Environment=OPENCLAW_SERVICE_KIND=gateway
+Environment=OPENCLAW_SERVICE_VERSION=2026.4.5
+
+[Install]
+WantedBy=default.target
+
+# /home/jun/.config/systemd/user/openclaw-gateway.service.d/hardening.conf
+[Service]
+# Filesystem hardening
+ProtectHome=read-only
+ReadWritePaths=/home/jun/.openclaw /home/jun/openclaw-sandbox /tmp/openclaw /var/run/docker.sock
+ProtectSystem=strict
+
+# Process hardening
+NoNewPrivileges=yes
+
+# Network family restriction (AF_NETLINK is required for networkInterfaces() queries)
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6 AF_NETLINK

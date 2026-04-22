@@ -1,0 +1,5 @@
+{
+  "security": "allowlist",
+  "ask": "on-miss",
+  "strictInlineEval": true
+}

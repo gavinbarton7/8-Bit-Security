@@ -1,0 +1,17 @@
+Hooks (6/6 ready)
+┌──────────┬────────────────────────────┬─────────────────────────────────────────────────────────────────┬────────────┐
+│ Status   │ Hook                       │ Description                                                     │ Source     │
+├──────────┼────────────────────────────┼─────────────────────────────────────────────────────────────────┼────────────┤
+│ ✓ ready  │ 🚀 boot-md                 │ Run BOOT.md on gateway startup                                  │ openclaw-  │
+│          │                            │                                                                 │ bundled    │
+│ ✓ ready  │ 📎 bootstrap-extra-files   │ Inject additional workspace bootstrap files via glob/path       │ openclaw-  │
+│          │                            │ patterns                                                        │ bundled    │
+│ ✓ ready  │ 📝 command-logger          │ Log all command events to a centralized audit file              │ openclaw-  │
+│          │                            │                                                                 │ bundled    │
+│ ✓ ready  │ 💾 session-memory          │ Save session context to memory when /new or /reset command is   │ openclaw-  │
+│          │                            │ issued                                                          │ bundled    │
+│ ✓ ready  │ 🔗 memory-core-short-term- │                                                                 │ plugin:mem │
+│          │ dreaming-cron              │                                                                 │ ory-core   │
+│ ✓ ready  │ 🛡️ prompt-injection-filter │ Scan inbound messages for prompt-injection patterns; flag,      │ openclaw-  │
+│          │                            │ annotate, and log                                               │ managed    │
+└──────────┴────────────────────────────┴─────────────────────────────────────────────────────────────────┴────────────┘

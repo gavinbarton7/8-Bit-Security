@@ -1,0 +1,42 @@
+Showing local approvals.
+
+Approvals
+┌───────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Field     │ Value                                                                                                    │
+├───────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Target    │ local                                                                                                    │
+│ Path      │ ~/.openclaw/exec-approvals.json                                                                          │
+│ Exists    │ yes                                                                                                      │
+│ Hash      │ 54cd0d77f08aca4a000a4d26d1e3a3074c39595eb9d34380b35b5dc27224883d                                         │
+│ Version   │ 1                                                                                                        │
+│ Socket    │ ~/.openclaw/exec-approvals.sock                                                                          │
+│ Defaults  │ none                                                                                                     │
+│ Agents    │ 1                                                                                                        │
+│ Allowlist │ 4                                                                                                        │
+└───────────┴──────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+Allowlist
+┌──────────┬────────┬──────────────────────────────────────────────────────────────────────────────────────┬───────────┐
+│ Target   │ Agent  │ Pattern                                                                              │ Last Used │
+├──────────┼────────┼──────────────────────────────────────────────────────────────────────────────────────┼───────────┤
+│ local    │ *      │ /usr/bin/uname                                                                       │ 22h ago   │
+│ local    │ *      │ /usr/bin/uptime                                                                      │ 22h ago   │
+│ local    │ *      │ /usr/bin/date                                                                        │ 22h ago   │
+│ local    │ *      │ /usr/bin/whoami                                                                      │ 22h ago   │
+└──────────┴────────┴──────────────────────────────────────────────────────────────────────────────────────┴───────────┘
+
+Effective Policy
+┌────────────┬────────────────────────┬──────────────────────────┬────────────────────────────────┬────────────────────┐
+│ Scope      │ Requested              │ Host                     │ Effective                      │ Notes              │
+├────────────┼────────────────────────┼──────────────────────────┼────────────────────────────────┼────────────────────┤
+│ tools.exec │ security=allowlist     │ security=allowlist       │ security=allowlist             │ requested          │
+│            │ (tools.exec.security)  │ (inherits requested      │ ask=on-miss                    │ security applies;  │
+│            │ ask=on-miss (tools.    │ tool policy)             │                                │ requested ask      │
+│            │ exec.ask)              │ ask=on-miss (inherits    │                                │ applies            │
+│            │                        │ requested tool policy)   │                                │                    │
+│            │                        │ askFallback=full         │                                │                    │
+│            │                        │ (OpenClaw default        │                                │                    │
+│            │                        │ (full))                  │                                │                    │
+└────────────┴────────────────────────┴──────────────────────────┴────────────────────────────────┴────────────────────┘
+
+Precedence: Effective exec policy is the host approvals file intersected with requested tools.exec policy.
